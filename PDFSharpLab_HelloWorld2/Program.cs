@@ -24,10 +24,13 @@ gfx.DrawString($"你好，PDFsharp at {DateTime.Now:HH:mm:ss} ！", font, XBrush
     XStringFormats.Center);
 
 XFont fontJhengHei = new XFont("微軟正黑體", 36);
-gfx.DrawString($"這是微軟正黑體 36 PDFsharp at {DateTime.Now:HH:mm:ss} ！", fontJhengHei, XBrushes.Black, 10, 120);
+gfx.DrawString($"這是微軟正黑體 36 PDFsharp at {DateTime.Now:HH:mm:ss} ！", fontJhengHei, XBrushes.Black, 10, 60);
 
 XFont fontKaiu = new XFont("標楷體", 36);
-gfx.DrawString($"這是標楷體 36 PDFsharp at {DateTime.Now:HH:mm:ss} ！", fontKaiu, XBrushes.Black, 10, 160);
+gfx.DrawString($"這是標楷體 36 PDFsharp at {DateTime.Now:HH:mm:ss} ！", fontKaiu, XBrushes.Black, 10, 100);
+
+XFont fontArial = new XFont("Arial", 36);
+gfx.DrawString($"This is Arial font, 36 PDFsharp at {DateTime.Now:HH:mm:ss} ！", fontArial, XBrushes.Black, 10, 140);
 
 // 儲存 PDF
 string filename = "output.pdf";

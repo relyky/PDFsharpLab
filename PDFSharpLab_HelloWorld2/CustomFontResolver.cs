@@ -1,5 +1,6 @@
 ﻿using PdfSharp.Fonts;
 using System.Drawing.Text;
+using System.Runtime.CompilerServices;
 
 namespace PDFSharpLab_HelloWorld2;
 
@@ -11,6 +12,10 @@ public class CustomFontResolver : IFontResolver
   
   public byte[]? GetFont(string faceName)
   {
+    // Note: PDFsharp never calls GetFont twice with the same face name.
+    // Note: If a typeface is resolved by the PlatformFontResolver.ResolveTypeface
+    //       you never come here.
+
     string fontFileName = faceName;
 
     //※ PDFsharp 只支援 TrueType 字型(.ttf)。
@@ -51,7 +56,10 @@ public class CustomFontResolver : IFontResolver
       }
     }
 
-    // 回傳 null 表示不支援該字型。
-    return null;
+    // Alternatively forward call to PlatformFontResolver.
+    return PlatformFontResolver.ResolveTypeface(familyName, bold, italic);
+
+    //// 回傳 null 表示不支援該字型。
+    //return null;
   }
 }
