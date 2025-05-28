@@ -2,9 +2,9 @@
 試著用 PDFsharp 開啟現有 PDF 檔用憑證簽署。
 
 # 沒圖沒真象
-測試產生的PDF檔:
-* [output.pdf](_doc/output.pdf)
-* [output2.pdf](_doc/output2.pdf)
+測試產生的PDF檔並簽署:
+* [output.pdf 產出PDF檔並直接簽名](_doc/output.pdf)
+* [output2.pdf 開啟之前產出的PDF檔再簽名一次](_doc/output2.pdf)
 
 # 結論
 還真的可行。   
