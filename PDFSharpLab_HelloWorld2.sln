@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFSharpLab_HelloWorld2", "PDFSharpLab_HelloWorld2\PDFSharpLab_HelloWorld2.csproj", "{ACCCC89E-3530-4CD9-8847-E5A30F475372}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACCCC89E-3530-4CD9-8847-E5A30F475372}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACCCC89E-3530-4CD9-8847-E5A30F475372}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACCCC89E-3530-4CD9-8847-E5A30F475372}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACCCC89E-3530-4CD9-8847-E5A30F475372}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F53C6DFF-1F1C-4F9F-B8D1-26008B60DBF6}
+	EndGlobalSection
+EndGlobal
