@@ -6,15 +6,17 @@ namespace PDFSharpLab_HelloWorld2;
 
 public class CustomFontResolver : IFontResolver
 {
+  //DirectoryInfo fontsFolder = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Fonts)); // 取得字型資料夾路徑
+  readonly DirectoryInfo _fontsFolder = new DirectoryInfo(@"assets\pdfsharp-6.x\fonts"); // 取得字型資源路徑
+  
   public byte[]? GetFont(string faceName)
   {
     string fontFileName = faceName;
 
-    //DirectoryInfo fontsFolder = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Fonts));
-    DirectoryInfo sampleFolder = new DirectoryInfo(@"D:\Temp\PDFSharpLab_HelloWorld2\assets\pdfsharp-6.x\fonts"); // 取得字型資料夾路徑
-    foreach (var fontsFolder in sampleFolder.GetDirectories())
+    //※ PDFsharp 只支援 TrueType 字型(.ttf)。
+    foreach (var fontFolder in _fontsFolder.GetDirectories())
     {
-      foreach (FileInfo file in fontsFolder.GetFiles("*.ttf"))
+      foreach (FileInfo file in fontFolder.GetFiles("*.ttf"))
       {
         if(file.Name == fontFileName)
         {
@@ -28,13 +30,11 @@ public class CustomFontResolver : IFontResolver
 
   public FontResolverInfo? ResolveTypeface(string familyName, bool bold, bool italic)
   {
-    //DirectoryInfo fontsFolder = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.Fonts)); // 取得字型資料夾路徑
-    DirectoryInfo sampleFolder = new DirectoryInfo(@"D:\Temp\PDFSharpLab_HelloWorld2\assets\pdfsharp-6.x\fonts"); // 取得字型資料夾路徑
 
     //※ PDFsharp 只支援 TrueType 字型(.ttf)。
-    foreach (var fontsFolder in sampleFolder.GetDirectories())
+    foreach (var fontFolder in _fontsFolder.GetDirectories())
     {
-      foreach (FileInfo file in fontsFolder.GetFiles("*.ttf"))
+      foreach (FileInfo file in fontFolder.GetFiles("*.ttf"))
       {
         var pfc = new PrivateFontCollection();
         pfc.AddFontFile(file.FullName);
