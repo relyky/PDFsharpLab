@@ -14,6 +14,12 @@
     <Content Include="assets\pdfsharp-6.x\fonts\標楷體\kaiu.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="assets\pdfsharp-6.x\signatures\JohnDoe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\pdfsharp-6.x\signatures\test-cert_rsa_1024.pfx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
